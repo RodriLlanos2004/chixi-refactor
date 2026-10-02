@@ -1,0 +1,11 @@
+{
+  "name": "chixi-tests",
+  "version": "1.0.0",
+  "description": "Unit tests with Jest for the Ch'ixi player states and torch",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

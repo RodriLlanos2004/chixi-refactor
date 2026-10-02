@@ -41,3 +41,16 @@ Secuencia de 44 cuadros con 40 plataformas:
 ## Historial
 
 Un commit para la linea base y uno por patron. El tag `v1.0` marca la entrega.
+
+## Pruebas unitarias con Jest
+
+Jest solo ejecuta JavaScript, asi que la carpeta `tests/` contiene una version en
+JS de las dos piezas probadas: la maquina de estados del jugador
+(`src/playerStates.js`) y la antorcha (`src/torch.js`). Las pruebas estan en
+`tests/test.js`.
+
+Requiere Node.js.
+
+    cd tests
+    npm install
+    npm test
