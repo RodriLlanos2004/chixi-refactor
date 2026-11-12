@@ -6,4 +6,8 @@
     <RootNamespace>Chixi</RootNamespace>
     <AssemblyName>ChixiRefactor</AssemblyName>
   </PropertyGroup>
+  <ItemGroup>
+    <!-- Las pruebas viven en su propio proyecto -->
+    <Compile Remove="tests/**" />
+  </ItemGroup>
 </Project>
