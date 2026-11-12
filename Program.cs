@@ -30,8 +30,14 @@ namespace Chixi
             public float FinalX;
         }
 
-        public static void Main()
+        public static void Main(string[] args)
         {
+            if (args.Length > 0 && args[0] == "--bench")
+            {
+                Benchmark.Run(args.Length > 1 ? args[1] : "metrics/bench.csv");
+                return;
+            }
+
             Trace v0 = RunBefore();
             Trace v1 = RunAfter();
             CultureInfo inv = CultureInfo.InvariantCulture;
