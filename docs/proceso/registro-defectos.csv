@@ -1,0 +1,7 @@
+id,fecha_deteccion,descripcion,tipo,fase_inyeccion,fase_deteccion,severidad,ocurrencias,estado,correccion,verificacion
+DEF-01,2026-09-24,"Estado reportado incorrecto al salir de un estado gobernado por bandera (tanteo, ataque y salto): v0 reporta el estado viejo en el cuadro de salida",Logica,Construccion,Prueba comparativa,Media,3,Cerrado,7c0073d,T14
+DEF-02,2026-11-11,"Las pruebas Jest de estados validan un modelo distinto a PlayerStates.cs: salto desde cualquier estado, accion stop inexistente, sin Probe ni Attack y nombres de estado distintos",Pruebas,Pruebas,Auditoria,Alta,1,Cerrado,ver CHANGELOG v1.1,T01 a T06
+DEF-03,2026-11-11,"Las pruebas Jest de antorcha validan un modelo distinto a Torch: inicia encendida, consume por tiempo y no tiene Toggle",Pruebas,Pruebas,Auditoria,Alta,1,Cerrado,ver CHANGELOG v1.1,T07 a T09
+DEF-04,2026-11-11,"Rama remota claude/sharp-darwin-vhinn5 fuera del alcance: agrega una skill de Remotion sin relacion con el juego",Configuracion,Gestion de configuracion,Auditoria,Baja,1,Abierto,Eliminar la rama remota,git branch -r
+DEF-05,2026-11-11,"No existe verificacion automatica: ningun cambio se compila ni se prueba antes de integrarse",Proceso,Planeacion,Auditoria,Media,1,Cerrado,.github/workflows/ci.yml,Ejecucion de Actions
+DEF-06,2026-11-11,"Requisito de duracion del salto ambiguo: 0.45 s no es multiplo de 16 ms y la prueba T05 esperaba 28 cuadros en vez de 29",Requisitos,Requisitos,Prueba unitaria,Baja,1,Cerrado,REQ-03 aclarado,T05

@@ -1,0 +1,6 @@
+Grafico X-R v1.0: media general 0.228 us, LSC 0.264, LIC 0.193, R medio 0.062, LSC R 0.130
+Subgrupos fuera de control en X: [1, 19] | en R: [1, 19, 22, 23]
+v0: media 4.044 us, mediana 3.930 | v1.0: media 0.228 us, mediana 0.223 | mejora de la mediana 17.6x
+Defectos por tipo: Pruebas 2, Logica 1, Configuracion 1, Proceso 1, Requisitos 1
+Defectos abiertos: 1 de 6
+Commits en main: 10

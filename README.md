@@ -1,4 +1,6 @@
-# Chixi: refactorizacion y patrones de diseno (v1.0)
+# Chixi: refactorizacion y patrones de diseno (v1.1)
+
+[![CI](https://github.com/RodriLlanos2004/chixi-refactor/actions/workflows/ci.yml/badge.svg)](https://github.com/RodriLlanos2004/chixi-refactor/actions/workflows/ci.yml)
 
 Nucleo de gameplay de Chixi, vertical slice de accion y aventura en el Salar de
 Uyuni. El repositorio conserva la version original y la refactorizada para que
@@ -40,9 +42,32 @@ Secuencia de 44 cuadros con 40 plataformas:
 
 ## Historial
 
-Un commit para la linea base y uno por patron. El tag `v1.0` marca la entrega.
+Lineas base: `v0` (version original), `v1.0` (refactorizacion) y `v1.1`
+(proceso, pruebas sobre el codigo real e integracion continua). Ver
+[CHANGELOG.md](CHANGELOG.md) y [docs/proceso](docs/proceso/README.md).
 
-## Pruebas unitarias con Jest
+## Pruebas
+
+La puerta de calidad es la suite C#, que ejecuta las clases reales de `src/After`
+y cita el requisito que verifica cada prueba:
+
+    dotnet run --project tests/Chixi.Tests/Chixi.Tests.csproj
+
+La integracion continua la corre en cada push.
+
+## Medicion
+
+    dotnet run -- --bench metrics/bench.csv
+    python3 tools/metricas.py
+
+Genera el grafico de control, el histograma de tiempos, el Pareto de defectos y
+el volumen de cambio por commit en `metrics/`.
+
+## Pruebas Jest (referencia historica, fuera de la puerta de calidad)
+
+Estas pruebas validan una copia en JavaScript cuyas reglas difieren del codigo C#
+(ver [DEF-02 y DEF-03](docs/proceso/rca-pruebas-falsas.md)). Se conservan como
+evidencia del analisis de causa raiz, pero ya no cuentan como verificacion.
 
 Jest solo ejecuta JavaScript, asi que la carpeta `tests/` contiene una version en
 JS de las dos piezas probadas: la maquina de estados del jugador
